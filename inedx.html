@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- General -->
+    <link rel="stylesheet" href="css/General.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="page">
+    <!--______________________ Sidebar ________________________ -->
+        <div class="sidebar">
+            <h3 class="title">Elef-TQ.</h3>
+            <ul>
+                <li>
+                    <a href="inedx.html" class="active">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span class="hide_mobile">Dashboard</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span class="hide_mobile">Settings</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span class="hide_mobile">Profile</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span class="hide_mobile">Projects</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span class="hide_mobile">Courses</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span class="hide_mobile">Friends</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-regular fa-file fa-fw"></i>
+                        <span class="hide_mobile">Files</span>
+                    </a>  
+                </li>
+                <li>
+                    <a href="inedx.html">
+                        <i class="fa-regular fa-credit-card fa-fw"></i>
+                        <span class="hide_mobile">Plans</span>
+                    </a>  
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+    <!--______________________ Header ________________________ -->
+    <div class="header">
+        <div class="search">
+            <input type="search" placeholder="Type A Keyword">
+        </div>
+        <div class="icons">
+            <span class="notification"><i class="fa-regular fa-bell fa-lg"></i></span>
+            <img src="./imgs/avatar.png" alt="avatar" class="admin">
+        </div> 
+    </div>
+    <!--______________________ Page Title ________________________ -->
+    <div class="main_title">
+        <h1>Dashboard</h1>
+    </div>
+    <!--______________________ Page content ________________________ -->
+    <main class="page_content">
+    <!--______________________ Welcome Component ________________________ -->
+    <div class="welcome">
+            <div class="welcome_intro">
+                <div class="component_title">
+                    <h2>Welcome</h2>
+                    <p>Elef-TQ.</p>
+                </div>
+                <img src="./imgs/welcome.png" alt="welcome" class="hide_mobile">
+            </div>
+            <img src="./imgs/avatar.png" alt="avatar" class="avatar">
+            <div class="welcome_content">
+                <div>Tariq ait lakhlift <span>Software Enginner</span></div>
+                <div> 76 <span>Project</span></div>
+                <div> 50 <span>Client</span></div>
+            </div>
+            <a href="profile.html" class="component_btn">Profile</a>
+    </div>
+    <!--______________________ Quick Draft Component ________________________ -->
+    <div class="component Draft">
+        <div class="component_title">
+            <h2>Quick Draft</h2>
+            <p>Write A Draft For Your Ideas</p>
+        </div>
+        <div class="Draft_content">
+           <input type="text" placeholder="Title" class="input">
+           <textarea placeholder="Your Thought" class="input"></textarea>
+        </div>
+        <a href="profile.html" class="component_btn visit ">Save</a>
+    </div>
+    <!--______________________ Yearly Targets Component _______________________ -->
+    <div class="component Targets">
+        <div class="component_title">
+            <h2>Yearly Targets</h2>
+            <p>Targets Of The Year</p>
+        </div>
+        <div class="Targets_content">
+            <div class="team box">
+                <div class="icon">
+                    <i class="fa-solid fa-user fa-lg c-green"></i>
+                </div>
+                <div class="details">
+                    <span class="box_title">Team</span>
+                    <span class="box_number">12</span>
+                    <div class="progress">
+                        <span style="width: 80%" data-progress="80%"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="projects box">
+                <div class="icon">
+                    <i class="fa-solid fa-code fa-lg c-orange"></i>
+                </div>
+                <div class="details">
+                    <span class="box_title">Projects</span>
+                    <span class="box_number">24</span>
+                    <div class="progress">
+                        <span style="width: 75%" data-progress="75%"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="money box">
+                <div class="icon">
+                    <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+                </div>
+                <div class="details">
+                    <span class="box_title">Team</span>
+                    <span class="box_number">12</span>
+                    <div class="progress">
+                        <span style="width: 60%" data-progress="60%"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--______________________ Tickets Statistics Component ___________________ -->
+    <div class="component Stats">
+        <div class="component_title">
+            <h2>Tickets Statistics</h2>
+            <p>Everything About Support Tickets</p>
+        </div>
+        <div class="stats_content">
+            <div class="stats_box orange_box">
+                <i class="fa-regular fa-rectangle-list fa-2x"></i>
+                <span class="box_number">2500</span>
+                <span class="box_title">Total</span>
+            </div>
+            <div class="stats_box blue_box">
+                <i class="fa-solid fa-spinner fa-2x"></i>
+                <span class="box_number">500</span>
+                <span class="box_title">Pending</span>
+            </div>
+            <div class="stats_box red_box">
+                <i class="fa-regular fa-circle-check fa-2x"></i>
+                <span class="box_number">1900</span>
+                <span class="box_title">Closed</span>
+            </div>
+            <div class="stats_box green_box">
+                <i class="fa-regular fa-rectangle-xmark fa-2x"></i>
+                <span class="box_number">100</span>
+                <span class="box_title">ads</span>
+            </div>
+        </div>
+    </div>
+    <!--______________________ Latest News Component ________________________ -->
+    <div class="component News">
+        <div class="component_title">
+            <h2>Latest News</h2>
+        </div>
+        <div class="News_content">
+
+           <div class="News_box">
+             <img src="./imgs/news-01.png" alt="news">
+             <div class="box_text">
+                <h3 class="box_title">Created SASS Section</h3>
+                <p class="box_sous_title">New SASS Examples & Tutorials</p>
+             </div>
+             <div class="box_btn">3 Days Ago</div>
+           </div>
+           <div class="News_box">
+            <img src="./imgs/news-02.png" alt="news">
+            <div class="box_text">
+               <h3 class="box_title">Changed The Design</h3>
+               <p class="box_sous_title">A Brand New Website Design</p>
+            </div>
+            <div class="box_btn">4 Days Ago</div>
+          </div>
+          <div class="News_box">
+            <img src="./imgs/news-03.png" alt="news">
+            <div class="box_text">
+               <h3 class="box_title">Team Increased</h3>
+               <p class="box_sous_title">3 Developers Joined The Team</p>
+            </div>
+            <div class="box_btn">5 Days Ago</div>
+          </div>
+          <div class="News_box">
+            <img src="./imgs/news-04.png" alt="news">
+            <div class="box_text">
+               <h3 class="box_title">Added Payment Gateway</h3>
+               <p class="box_sous_title">Many New Payment Gateways Added</p>
+            </div>
+            <div class="box_btn">7 Days Ago</div>
+          </div>
+
+        </div>
+    </div>
+    <!--______________________ Latest Tasks Component ________________________ -->
+    <div class="component Tasks">
+        <div class="component_title">
+            <h2>Latest Tasks</h2>
+        </div>
+        <div class="Tasks_content">
+
+           <div class="Tasks_box">
+             <div class="box_text">
+                <h3 class="box_title">Record One New Video</h3>
+                <p class="box_sous_title">Record Python Create Exe Project</p>
+             </div>
+             <i class="fa-regular fa-trash-can delete"></i>
+           </div>
+
+           <div class="Tasks_box">
+            <div class="box_text">
+               <h3 class="box_title">Write Article</h3>
+               <p class="box_sous_title">Write Low Level vs High Level Languages</p>
+            </div>
+            <i class="fa-regular fa-trash-can delete"></i>
+          </div>
+
+          <div class="Tasks_box">
+            <div class="box_text">
+               <h3 class="box_title">Finish Project</h3>
+               <p class="box_sous_title">Publish Academy Programming Project</p>
+            </div>
+            <i class="fa-regular fa-trash-can delete"></i>
+          </div>
+
+          <div class="Tasks_box done">
+            <div class="box_text">
+               <h3 class="box_title">Attend The Meeting</h3>
+               <p class="box_sous_title">Attend The Project Business Analysis Meeting</p>
+            </div>
+            <i class="fa-regular fa-trash-can delete"></i>
+          </div>
+
+          <div class="Tasks_box done">
+            <div class="box_text">
+               <h3 class="box_title">Finish Lesson</h3>
+               <p class="box_sous_title">Finish Teaching Flex Box</p>
+            </div>
+            <i class="fa-regular fa-trash-can delete"></i>
+          </div>
+
+        </div>
+    </div>
+    <!--______________________ Top Search Items Component ________________________ -->
+    <div class="component Search">
+        <div class="component_title">
+            <h2>Top Seach Items</h2>
+        </div>
+        <div class="Search_content">
+            <div class="items_head">
+                <h3 class="box_sous_title">Keyword</h3>
+                <h3 class="box_sous_title">Search Count</h3>
+            </div>
+            <div class="item">
+                <span>HTML5</span>
+                <span class="box_btn">220</span>
+            </div>
+            <div class="item">
+                <span>CSS3</span>
+                <span class="box_btn">20</span>
+            </div>
+            <div class="item">
+                <span>JavaScript</span>
+                <span class="box_btn">15</span>
+            </div>
+            <div class="item">
+                <span>ReactJS</span>
+                <span class="box_btn">2</span>
+            </div>
+            <div class="item">
+                <span>NextJS</span>
+                <span class="box_btn">89</span>
+            </div>
+            <div class="item">
+                <span>MongoDB</span>
+                <span class="box_btn">31</span>
+            </div>
+        </div>
+    </div>
+    <!--______________________ Latest Uploads Component ________________________ -->
+    <div class="component Uploads">
+        <div class="component_title">
+            <h2>Latest Uploads</h2>
+        </div>
+        <div class="Uploads_content">
+            
+            <div class="Uploads_box">
+                <div class="left_box">
+                    <img src="./imgs/pdf.svg" alt="upload">
+                    <div class="text_box">
+                        <h3 class="box_title">my-file.pdf</h3>
+                        <p class="box_sous_title">Elef-TQ.</p>
+                    </div>
+                </div>
+                <div class="box_btn">2.9mb</div>
+            </div>
+            <div class="Uploads_box">
+                <div class="left_box">
+                    <img src="./imgs/avi.svg" alt="upload">
+                    <div class="text_box">
+                        <h3 class="box_title">My-Video-File.avi</h3>
+                        <p class="box_sous_title">Elef-TQ.</p>
+                    </div>
+                </div>
+                <div class="box_btn">5.8mb</div>
+            </div>
+            <div class="Uploads_box">
+                <div class="left_box">
+                    <img src="./imgs/dll.svg" alt="upload">
+                    <div class="text_box">
+                        <h3 class="box_title">My-DLL-File.pdf</h3>
+                        <p class="box_sous_title">Elef-TQ.</p>
+                    </div>
+                </div>
+                <div class="box_btn">4.9mb</div>
+            </div>
+            <div class="Uploads_box">
+                <div class="left_box">
+                    <img src="./imgs/eps.svg" alt="upload">
+                    <div class="text_box">
+                        <h3 class="box_title">My-Eps-File.pdf</h3>
+                        <p class="box_sous_title">Elef-TQ.</p>
+                    </div>
+                </div>
+                <div class="box_btn">2.9mb</div>
+            </div>
+            <div class="Uploads_box">
+                <div class="left_box">
+                    <img src="./imgs/png.svg" alt="upload">
+                    <div class="text_box">
+                        <h3 class="box_title">My-Eps-File.pdf</h3>
+                        <p class="box_sous_title">Elef-TQ.</p>
+                    </div>
+                </div>
+                <div class="box_btn">2.9mb</div>
+            </div>
+            <div class="Uploads_box">
+                <div class="left_box">
+                    <img src="./imgs/psd.svg" alt="upload">
+                    <div class="text_box">
+                        <h3 class="box_title">My-Psd-File.pdf</h3>
+                        <p class="box_sous_title">Elef-TQ.</p>
+                    </div>
+                </div>
+                <div class="box_btn">7.5mb</div>
+            </div>
+             
+        </div>
+    </div>
+    <!--______________________ Last Project Progress Component ________________________ -->
+    <div class="component Progress">
+        <div class="component_title">
+            <h2>Last Projects Progress</h2>
+        </div>
+        <div class="Progress_content">
+            <ul>
+                <li class="done">Got The Project</li>
+                <li class="done">Started The Project</li>
+                <li class="done">The Project About To Finish</li>
+                <li class="current">Test The Project</li>
+                <li>Deploy The Project to client</li>  
+            </ul>
+            <img src="./imgs/project.png" alt="project" class="lunch_icon hide_mobile">
+        </div>
+    </div>
+    <!--______________________ Reminders Component ________________________ -->
+    <!--______________________ Latest Post Component ________________________ -->
+  
+  
+    <!--______________________ Social Media Stats Component ________________________ -->
+  
+    <!--______________________ Projects Component ________________________ -->
+
+
+
+
+
+</main>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

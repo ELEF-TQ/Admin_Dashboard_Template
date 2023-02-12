@@ -1,0 +1,387 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
+
+.page_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+@media (max-width : 767px) {
+    .page_content {
+        grid-template-columns: minmax(200px , 1fr);
+        gap: 10px;
+    }  
+}
+/* ______________________ Dashboread page ________________________ */
+/* -----welcome component------*/
+.welcome {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.welcome .welcome_intro {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;  
+}
+.welcome .welcome_intro img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+.welcome .avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0 0 5px var(--grey-color);
+    margin-left: 20px;
+    margin-top: -32px;
+}
+.welcome_content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd ;
+}
+.welcome_content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.welcome_content > div span {
+    display: block;
+    font: 14px;
+    margin-top: 10px;
+    color:var(--grey-color) ;
+}
+@media (max-width : 767px) {
+    .welcome_content {
+        flex-direction: column;
+    }
+    .welcome_content > div span {
+        margin-top: 5px;
+    }
+    .welcome .avatar {
+        margin-left: 40%;
+
+    }  
+}
+
+/* ----- Quick Draft component------*/
+.Draft {
+    padding: 20px;
+}
+.Draft .Draft_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Draft .Draft_content .input {
+    border-radius: 12px;
+    background-color: #eee;
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: block;
+}
+.Draft .Draft_content textarea {
+    height: 150px;
+    resize: none;
+}
+/* ----- Targets component------*/
+.Targets {
+    padding: 20px;
+}
+.Targets .Targets_content .box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.Targets .Targets_content  .icon {
+    padding: 20px;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 14px 0.5rem 0;
+}
+.Targets .Targets_content .details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.Targets .Targets_content .details .box_title {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+.Targets .Targets_content .details .box_number {
+    margin: 9px 0px 16px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.Targets .Targets_content .progress {
+    width: 100%;
+    height: 3px;
+    display: inline;
+}
+.Targets .Targets_content .progress span {
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.Targets .Targets_content .progress span::before {
+    content: attr(data-progress);
+    position: absolute;
+    width: fit-content;
+    bottom: 10px;
+    right: -18px;
+    position: absolute;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.Targets .Targets_content .progress span::after {
+    content: "";
+    border-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    position: absolute;
+    bottom: 8px;
+    right: -2px;
+    transform: rotate(45deg);
+}
+/* Green Tea */
+.team .icon ,
+.team .progress {
+    background-color: rgb(34 197 94 / 20%);
+}
+.team .icon i {
+    color: var(--green-color);
+}
+.team .progress span ,
+.team .progress span::before ,
+.team .progress span::after  {
+    background-color: var(--green-color);
+}
+
+/* Blue Porject */
+.projects .icon ,
+.projects .progress {
+    background-color: rgb(0 117 255 / 20%);
+}
+.projects .icon i {
+    color: var(--blue-color);
+} 
+.projects .progress span ,
+.projects .progress span::before ,
+.projects .progress span::after  {
+    background-color: var(--blue-color);
+}
+
+/* Orange Money */
+.money .icon  ,
+.money .progress {
+    background-color: rgb(245 158 11 / 20%);
+}
+.money .icon i {
+    color: var(--orange-color);
+}
+.money .progress span ,
+.money .progress span::before ,
+.money .progress span::after  {
+    background-color: var(--orange-color);
+}
+
+
+/* ----- Tickets Statistics Component ------ */
+.stats_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.stats_content .stats_box {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 19px;
+    border-radius: 12px;
+    justify-content: space-around;
+    border: 1px solid var(--grey-color);
+    margin: 10px;
+}
+.stats_content .stats_box .box_number {
+    font-size: 25px;
+    font-weight: bold;
+}
+.stats_content .stats_box .box_title {
+    color: var(--grey-color);
+}
+
+.stats_content .orange_box i {
+    color: var(--orange-color);
+}
+.stats_content .blue_box i {
+    color: var(--blue-color);
+}
+.stats_content .green_box i {
+    color: var(--green-color);
+}
+.stats_content .red_box i {
+    color: var(--red-color);
+}
+
+/* ----- Latests news + Tasks + Uploads Component ------ */
+.News_content ,
+.Tasks_content ,
+.Uploads_content  {
+    margin-top: 20px;
+}
+.News_content .News_box:not(:last-child) ,
+.Tasks_content .Tasks_box:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--grey-color);
+}
+.News_content .News_box ,
+.Tasks_content .Tasks_box  ,
+.Uploads_content .Uploads_box {
+    display: flex;
+    align-items: center;
+}
+
+/* News */
+.News_content .News_box img {
+    width: 100px;
+    border-radius: 6px;
+    margin-right: 15px
+}
+.News_content .News_box .box_text {
+    width: 56%;
+}
+
+/* Tasks */
+.Tasks_content .Tasks_box {
+    justify-content: space-between;
+}
+.Tasks_content .Tasks_box i {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.Tasks_content .Tasks_box i:hover {
+    color: var(--red-color);
+}
+.Tasks_content .done {
+    opacity: 0.4;
+}
+.Tasks_content .done p ,
+.Tasks_content .done h3 {
+    text-decoration: line-through;
+}
+
+/* Uploads */
+.Uploads_content .Uploads_box {
+    justify-content: space-between;
+}
+.Uploads_content .Uploads_box img {
+    width: 40px;
+    margin-right: 10px;
+}
+.Uploads_content .Uploads_box .left_box{
+    display: flex;
+    align-items: center;
+}
+.Uploads_content .Uploads_box .text_box h3{
+    margin: 0;
+}
+.Uploads_content .Uploads_box:not(:last-child) {
+    padding: 8px 0;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+/* ----- Latests Search Component ------ */
+.Search_content .items_head ,
+.Search_content .item  {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+.Search_content .item {
+    margin: 20px 0px;
+}
+
+
+/* ----- Project Progress Component ------ */
+.Progress_content {
+    position: relative;
+ 
+}
+.Progress_content ul {
+    margin: 0;
+    position: relative;
+}
+.Progress_content ul li {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.Progress_content ul::before {
+   content: '';
+   position: absolute;
+   width: 2px;
+   height: 100%;
+   background-color: var(--blue-color);
+   left: 11px;
+}
+.Progress_content ul li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    margin-right: 15px;
+    z-index: 1;
+}
+.Progress_content ul li.done::before {
+    content: '';
+    background-color: var(--blue-color);
+}
+.Progress_content ul li.current::before {
+    content: '';
+    animation: color_change 0.5s infinite alternate;
+}
+@keyframes color_change {
+	from { background-color: white; }
+	to { background-color: var(--blue-color); }
+}
+
+.Progress_content .lunch_icon {
+    position: absolute;
+    width: 160px;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}

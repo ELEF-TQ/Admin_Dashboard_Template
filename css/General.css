@@ -1,0 +1,301 @@
+/*_________________________________ General style  _____________________________*/
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    min-height: 100vh;
+    background-color: #f1f5f9 ;
+    display: flex;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+  a {
+    text-decoration: none;
+    background-color: transparent;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  hr {
+    box-sizing: content-box; 
+    height: 0; 
+    overflow: visible; 
+  } 
+  img {
+    border-style: none;
+  }
+  button,
+  input {
+    overflow: visible;
+  }
+  button,
+  select {
+    text-transform: none;
+  }
+  textarea {
+    overflow: auto;
+  }
+  *:focus {
+    outline: none;
+  }
+
+/* ------- framwork class -------  */
+@media (max-width : 767px) {
+    .hide_mobile {
+        display: none;
+    }  
+    .txt_c_mobile {
+        text-align: center;
+    }
+    
+}
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+/* --------- ScrollBar ----------*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color)
+}
+
+/*_________________________________ End General Style  _____________________________*/
+
+
+/*_________________________________ Sidebar style _____________________________*/
+.sidebar {
+    width: 250px;
+    box-shadow:  0 0 10px #ddd;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
+.sidebar .title {
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+.sidebar .title::before {
+    content: '';
+    position: absolute;
+    width: 47%;
+    background: black;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px; 
+}
+.sidebar .title::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: black;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px white solid;
+}
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.sidebar ul li a span {
+    font-size: 14px;
+    margin-left: 10px;
+}
+/*____________ Hover effects __________*/
+.sidebar ul li a:hover ,
+.sidebar ul li a.active {
+    background-color : #f6f6f6; ;
+}
+/*____________ Media Queries __________*/
+@media (max-width : 767px) {
+    .sidebar {
+        width: 62px;
+        padding: 10px;
+    } 
+    .sidebar .title {
+        font-size: 11px;
+        margin-bottom: 19px;
+    } 
+    .sidebar .title::before ,
+    .sidebar .title::after {
+        display: none;
+    }
+}
+
+/*_________________________________ Header style _____________________________*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+.header .search {
+    position: relative;
+}
+.header .search input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 10px 10px 10px 30px;
+    width: 160px;
+    transition: width 0.3s;
+}
+.header .search::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f002";
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--grey-color);   
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons .notification {
+    position: relative;
+    cursor: pointer;
+}
+.header .icons .notification::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+    top: -4px;
+    right: -5px;
+}
+.header .icons .admin {
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/*____________ Focus effects __________*/
+.header .search input:focus {
+    width: 220px;   
+}
+.header .search input:focus::placeholder {
+    opacity: 0;
+}
+/*_________________________________ Main Title style _____________________________*/
+.main_title {
+    padding: 20px;
+    width: fit-content;
+    position: relative;
+}
+.main_title::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 120px;
+    background: white;
+    bottom: 13px;
+}
+.main_title::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 40px;
+    background: black;
+    bottom: 13px;
+}
+/*_________________________________ Component style _____________________________*/
+.component {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+}
+.component_title h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.component_title p {
+    font-size: 15px;
+    color: var(--grey-color);
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.component_btn {
+    display: block;
+    font-size: 14px;
+    background-color: var(--blue-color);
+    color: white;
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 0 15px 15px auto;
+    transition: 0.3s;
+}
+.component_btn:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* sous_title : iside components */
+.box_title {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.box_sous_title {
+  font-size: 14px;
+  color: var(--grey-color);
+  margin: 0;
+}
+/*gray box btn */
+.box_btn {
+  display: block;
+  font-size: 13px;
+  background-color: #eee;
+  color: black;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
